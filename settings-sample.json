@@ -1,0 +1,25 @@
+{
+    "smtp": {
+        "enabled": true,
+        "server":"you email server fqdn or IP",
+        "port":587,
+        "ssl":true,
+        "auth":true,
+        "username":"email sender account",
+        "password":"email sender password",
+        "to":["email recipients"],
+        "customize":{
+            "subject1":"Notification: MySQL lost sync on replication and it is auto-fixed",
+            "subject2":"Alert: MySQL lost sync on replication",        
+            "body":"Please check the log at {0} for details"
+        }
+        
+    },
+    "period": 300,
+    "timeout":10,
+    "error_1032": {
+        "skips":10,
+        "tables":["dualshield.log","dualshield.log_field","dualshield.history"]
+        
+    } 
+}

@@ -1,0 +1,25 @@
+{
+"smtp": {
+    "enabled": true,
+    "server":"mail.deepnetsecurity.com",
+    "port":587,
+    "ssl":true,
+    "auth":true,
+    "username":"mingfa.ma@deepnetsecurity.com",
+    "password":"deep&net2",
+    "to":["mingfag1@gmail.com"],
+    "customize":{
+        "subject1":"Notification: MySQL lost sync on replication and it is auto-fixed",
+        "subject2":"Alert: MySQL lost sync on replication",        
+        "body":"Please check the log at {0} for details"
+    }
+    
+},
+"period": 300,
+"timeout":10,
+"error_1032": {
+    "skips":10,
+    "tables":["dualshield.log","dualshield.log_field","dualshield.history"]
+    
+} 
+}
